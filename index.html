@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Static Template</title>\
+    <title>Static Template</title>
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div>
+    <figure id="card"></figure>
         <script type="text/babel">
            
-           const Card = ({name}) => <h1>{name}</h1>;
+           const Card = () => (
+            <div>
+                <h2>FirstName LastName</h2>
+  
+                <img class="avatar" src="http://placehold.it/300" />
+
+                <figcaption>
+    Quam nunc et donec nec turpis a, semper ut elit lacus duis lacus ipsum. Vestibulum amet non, nibh integer nulla accusantium, odio aenean vitae sollicitudin ut vitae, suspendisse eu mauris mi elementum mollis, blandit suspendisse fusce id. Faucibus libero enim, arcu ipsum et viverra morbi magna sed.
+                </figcaption>
+
+                <nav>
+                    <a href="#">Link A</a>
+                    <a href="#">Link B</a>
+                    <a href="#">Link C</a>
+                </nav>
+            </div>
+           );
            
-           class App extends React.Component {
-               render () {
-                   return(
-                       <div></div>
-                   )
-               }
-            }
+      
                         
-           ReactDOM.render(
-                    <App />
-                    document.getElementById("root")
-            );
+ReactDOM.render(
+    <Card />,
+    document.getElementById("card")
+    );
         </script>  
     </body>
 </html>
